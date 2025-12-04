@@ -59,7 +59,7 @@ export default function VantaDotsBackground() {
     <div className="relative min-h-screen">
       {/* Vanta background */}
       <div ref={vantaRef} className="fixed inset-0 -z-10" />
-{/* <Cursor /> */}
+      {/* <Cursor /> */}
       {/* Your content goes here */}
       <MainContent />
     </div>

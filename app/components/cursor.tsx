@@ -22,7 +22,7 @@ export default function Cursor() {
     window.addEventListener("mousemove", moveCursor);
 
     // Hover effects for buttons/links
-    const interactiveElements = document.querySelectorAll("button, a");
+    const interactiveElements = document.querySelectorAll("button, a, Link");
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseenter", () => {
         gsap.to(cursor, {
@@ -52,7 +52,7 @@ export default function Cursor() {
   return (
     <div
       ref={cursorRef}
-      className="fixed top-0 left-0 size-3 rounded-full pointer-events-none z-50 mix-blend-difference bg-white transform -translate-x-1/2 -translate-y-1/2"
+      className="fixed top-0 left-0 size-3 rounded-full pointer-events-none cursor-none z-50 mix-blend-difference bg-white transform -translate-x-1/2 -translate-y-1/2"
     ></div>
   );
 }

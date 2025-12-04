@@ -27,7 +27,8 @@ export default function AnimatedText2() {
             const tl = gsap.timeline({
               scrollTrigger: {
                 trigger: container,
-                start: "top 80%", // start when container reaches 80% of viewport
+                // start: "top 60%", // start when container reaches 80% of viewport
+                start: "top 80%",
                 end: "bottom center",
                 scrub: 1, // smooth reverse
               },
@@ -66,7 +67,7 @@ export default function AnimatedText2() {
   }, []);
 
   return (
-    <div className="w-screen min-h-screen bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-12 text-2xl text-center px-6 py-24">
+    <div className="w-dvw h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-12 text-2xl text-center px-6 py-24">
       <div className="spacer h-40" />
 
       <div className="container max-w-3xl">

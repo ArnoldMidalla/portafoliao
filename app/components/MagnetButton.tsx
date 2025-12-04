@@ -7,35 +7,38 @@ import Link from "next/link";
 interface MyComponentProps {
   icon: any;
   link?: string;
+  size?: number;
 }
 
-export default function MagnetButton({ link, icon: Icon }: MyComponentProps) {
-  const buttonRef = useRef<HTMLDivElement>(null);
+export default function MagnetButton({
+  link,
+  icon: Icon,
+  size,
+}: MyComponentProps) {
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const button = buttonRef.current;
-    if (!button) return;
-
-    let boundingRect = button.getBoundingClientRect();
-
-    const handleResize = () => {
-      boundingRect = button.getBoundingClientRect();
-    };
+    const wrapper = wrapperRef.current;
+    const inner = innerRef.current;
+    if (!wrapper || !inner) return;
 
     const handleMouseMove = (e: MouseEvent) => {
-      const mousePosX = e.clientX - (boundingRect.left + boundingRect.width / 2);
-      const mousePosY = e.clientY - (boundingRect.top + boundingRect.height / 2);
+      const rect = wrapper.getBoundingClientRect(); // <-- ALWAYS update per movement
 
-      gsap.to(button, {
-        x: mousePosX * 0.6,
-        y: mousePosY * 0.6,
-        duration: 0.5,
+      const offsetX = e.clientX - (rect.left + rect.width / 2);
+      const offsetY = e.clientY - (rect.top + rect.height / 2);
+
+      gsap.to(inner, {
+        x: offsetX * 0.4,
+        y: offsetY * 0.4,
+        duration: 0.4,
         ease: "power3.out",
       });
     };
 
     const handleMouseLeave = () => {
-      gsap.to(button, {
+      gsap.to(inner, {
         x: 0,
         y: 0,
         duration: 0.7,
@@ -43,24 +46,27 @@ export default function MagnetButton({ link, icon: Icon }: MyComponentProps) {
       });
     };
 
-    window.addEventListener("resize", handleResize);
-    button.addEventListener("mousemove", handleMouseMove);
-    button.addEventListener("mouseleave", handleMouseLeave);
+    wrapper.addEventListener("mousemove", handleMouseMove);
+    wrapper.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
-      button.removeEventListener("mousemove", handleMouseMove);
-      button.removeEventListener("mouseleave", handleMouseLeave);
+      wrapper.removeEventListener("mousemove", handleMouseMove);
+      wrapper.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
   return (
-    <Link href={link || "/"} className="inline-block">
+    <Link href={link || "/"} target="_blank" className="cursor-none">
       <div
-        ref={buttonRef}
-        className="inline-flex cursor-none"
+        ref={wrapperRef}
+      className="relative inline-flex items-cenwter justify-center w-12 h-12 cursor-none" // fixed hit area
       >
-        <Icon size={32} />
+        <div
+          ref={innerRef}
+          className="absolute pointer-events-none cursor-none" // inner layer moves
+        >
+          <Icon size={size || 32} />
+        </div>
       </div>
     </Link>
   );
