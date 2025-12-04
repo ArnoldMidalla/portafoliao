@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist, Geist_Mono, Grand_Hotel } from "next/font/google";
 import "./globals.css";
+import Nav from "./components/navbar";
+import Cursor from "./components/cursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -10,6 +12,17 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+})
+
+const grand = Grand_Hotel({
+  variable: "--font-grand-hotel",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -25,8 +38,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${grand.variable} antialiased select-none bg-white`}
       >
+        <Nav/>
+        <Cursor/>
         {children}
       </body>
     </html>
