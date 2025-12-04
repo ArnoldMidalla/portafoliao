@@ -3,6 +3,7 @@ import VantaDotsBackground from "./components/vantabg";
 import Cursor from "./components/cursor";
 import AnimatedText from "./components/AnimatedText";
 import AnimatedText2 from "./components/AnimatedText2";
+import Test from "./components/Test"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       {/* <Cursor/> */}
       <VantaDotsBackground />
       <AnimatedText2 />
+      <Test/>
     </div>
   );
 }
