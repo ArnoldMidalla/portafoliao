@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${grand.variable} antialiased select-none bg-white`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${grand.variable} antialiased select-none`}
       >
         <Nav/>
         <Cursor/>

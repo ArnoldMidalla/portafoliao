@@ -29,12 +29,12 @@ export default function AnimatedText({ text }: { text: any }) {
         autoSplit: true,
         onSplit: (self: any) => {
           gsap.from(self.words, {
-            y: 60,
+            y: 80,
             opacity: 0,
             stagger: 0.1,
             ease: "back",
-            duration: 0.9,
-            delay: 0.5,
+            duration: 1,
+            delay: 1,
           });
         },
       });

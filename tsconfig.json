@@ -28,7 +28,10 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
-    "**/*.mts"
-, "app/components/vantabg.jsx", "app/Test.jsx"  ],
+    "**/*.mts",
+    "app/components/vantabg.jsx",
+    "app/Test.jsx",
+    "app/components/SectionThree.tsx"
+  ],
   "exclude": ["node_modules"]
 }
