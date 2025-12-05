@@ -175,7 +175,7 @@ export default function HoverChars({ text = "Hover Me" }) {
       ref={container}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
-      className="cursor-none mix-blend-difference text-white tracking-normal "
+      className="cursor-none mix-blend-difference text-white tracking-normal"
     >
       {splitChars(text)}
     </span>

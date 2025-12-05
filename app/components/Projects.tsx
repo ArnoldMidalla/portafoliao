@@ -25,24 +25,42 @@ const projectsMap = [
 
 export default function Projects() {
   return (
-    <section className="w-dvw min-h-dvh bg-neutral-900 text-white font-dm p-16 pt-24">
+    <section className="w-dvw min-h-dvh bg-neutral-900 text-white font-dm p-24 pt-24 flex flex-col ">
       <h1 className="text-2xl">My previous work</h1>
-      <div className="flex space-y-4 justify-between">
+      {/* <div className="flex justify-between pt-8 max-w-5xl h-full gap-12"> */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-28 pt-8 max-w-5xl w-full">
         {projectsMap.map((project) => (
+          // <Link
+          //   href={`/projects/${project.id}`}
+          //   key={project.id}
+          //   className="cursor-none hover:scale-102 duration-300 ease-out flex flex-col gap-3"
+          // >
+          //   <div className="h-64 w-full overflow-hidden relative">
+          //     <div className="w-full h-full z-10 bg-transparent hover:bg-black/20 duration-300 absolute flex items-center justify-center"></div>
+          //     <Image
+          //       src={project.image}
+          //       alt={project.title}
+          //       fill
+          //       className="w-full h-full object-cover hover:scale-110 duration-300"
+          //     />
+          //   </div>
+          //   <p className="text-white text-xl">{project.title}</p>
+          // </Link>
           <Link
             href={`/projects/${project.id}`}
             key={project.id}
-            className="cursor-none hover:scale-105 duration-300 ease-out"
+            className="cursor-none flex flex-col gap-3 group"
           >
-            <div className="h-40 w-56 overflow-hidden relative">
-              <div className="w-full h-full z-10 bg-transparent hover:bg-black/20 duration-300 absolute" />
+            <div className="h-64 w-full overflow-hidden relative">
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
-                className="w-full h-full object-cover hover:scale-110 duration-300"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
               />
             </div>
+
+            <p className="text-white text-xl">{project.title}</p>
           </Link>
         ))}
       </div>
