@@ -3,6 +3,12 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {
+  IconApi,
+  IconAppWindow,
+  IconDeviceImac,
+  IconMap,
+} from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,46 +46,93 @@ export default function SectionThree() {
   }, []);
 
   return (
-    <div className="max-w-176 min-w-full">
+    <div className="max-w-208 min-w-full font-dm tracking-tight bg-white">
       {/* Horizontal scroll container */}
       <div ref={containerRef} className="relative overflow-hidden">
-        <div ref={horizontalRef} className="flex h-screen pl-48">
+        <div ref={horizontalRef} className="flex h-screen px-48">
           {/* Panel 1 */}
-          <div className="min-w-lg h-full flex items-center justify-center py-20">
-            <div className="border w-full h-full">
-              <div className="text-center px-8">
-                <h2 className="text-5xl font-bold mb-4">Panel 1</h2>
-                <p className="text-xl">Horizontal scrolling in action</p>
+          <div className="min-w-md h-full flex items-center justify-center py-20">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+              <p className="text-sm absolute top-4 right-4">uno</p>
+              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+                <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
+                  <IconMap />
+                </div>
+                <h2 className="text-4xl font-medium leading-8 mb-4 tracking-tighter">
+                  FullStack
+                  <br />
+                  Development
+                </h2>
+                <p className="leading-5.5">
+                  Building scalable and high-performance web applications using
+                  Next.js, React, Node.js, and TypeScript, with robust backend
+                  architectures, secure RESTful APIs, and clean code practices
+                </p>
               </div>
             </div>
           </div>
 
           {/* Panel 2 */}
-          <div className="min-w-lg h-full flex items-center justify-center py-20">
-            <div className="border w-full h-full">
-              <div className="text-center px-8">
-                <h2 className="text-5xl font-bold mb-4">Panel 2</h2>
-                <p className="text-xl">Keep scrolling vertically</p>
+          <div className="min-w-md h-full flex items-center justify-center py-20">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+              <p className="text-sm absolute top-4 right-4">dos</p>
+              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+                <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
+                  <IconDeviceImac />
+                </div>
+                <h2 className="text-4xl font-medium leading-8 mb-4 tracking-tighter">
+                  Ui Ux Design
+                  <br />& Frontend
+                </h2>
+                <p className="leading-5.5">
+                  Building scalable and high-performance web applications using
+                  Next.js, React, Node.js, and TypeScript, with robust backend
+                  architectures, secure RESTful APIs, and clean code practices
+                </p>
               </div>
             </div>
           </div>
 
           {/* Panel 3 */}
-          <div className="min-w-lg h-full flex items-center justify-center py-20">
-            <div className="border w-full h-full">
-              <div className="text-center px-8">
-                <h2 className="text-5xl font-bold mb-4">Panel 3</h2>
-                <p className="text-xl">It moves horizontally</p>
+          <div className="min-w-md h-full flex items-center justify-center py-20">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+              <p className="text-sm absolute top-4 right-4">tres</p>
+              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+                <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
+                  <IconAppWindow />
+                </div>
+                <h2 className="text-4xl font-medium leading-8 mb-4 tracking-tighter">
+                  Saas Platform
+                  <br />
+                  Development
+                </h2>
+                <p className="leading-5.5">
+                  Building scalable and high-performance web applications using
+                  Next.js, React, Node.js, and TypeScript, with robust backend
+                  architectures, secure RESTful APIs, and clean code practices
+                </p>
               </div>
             </div>
           </div>
 
           {/* Panel 4 */}
-          <div className="min-w-lg h-full flex items-center justify-center py-20">
-            <div className="border w-full h-full">
-              <div className="text-center px-8">
-                <h2 className="text-5xl font-bold mb-4">Panel 4</h2>
-                <p className="text-xl">Last horizontal panel</p>
+          <div className="min-w-md h-full flex items-center justify-center py-20">
+            <div className="relative border w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+              <p className="text-sm absolute top-4 right-4">cuatro</p>
+              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+                <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
+                  <IconApi />
+                </div>
+                <h2 className="text-4xl font-medium leading-8 mb-4 tracking-tighter">
+                  Api & System
+                  <br />
+                  Architecture
+                </h2>
+                <p className="leading-5.5">
+                  Building scalable and high-performance web applications using
+                  Next.js, React, Node.js, and TypeScript, with robust backend
+                  architectures, secure RESTful APIs, and clean code practices
+                </p>
               </div>
             </div>
           </div>
