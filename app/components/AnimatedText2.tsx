@@ -99,6 +99,9 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import SplitText from "gsap/SplitText";
+import MagnetButton from "./MagnetButton";
+import ConcusButton from "./ConcusButton";
+import { IconLink } from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -175,6 +178,12 @@ export default function AnimatedText2() {
         <h2 className="split">
           AutoSplit ensures your lines resplit when the browser resizes.
         </h2>
+      </div>
+      <div className="container max-w-3xl">
+        <div className="split">
+          <ConcusButton text="About Me" link="/about" icon={IconLink} />
+        </div>
+
       </div>
     </div>
   );

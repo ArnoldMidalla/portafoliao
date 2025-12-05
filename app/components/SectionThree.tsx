@@ -138,14 +138,6 @@ export default function SectionThree() {
           </div>
         </div>
       </div>
-
-      {/* Normal vertical section after */}
-      <section className="min-h-screen flex items-center justify-center bg-linear-to-br from-gray-800 to-gray-900">
-        <div className="text-center">
-          <h2 className="text-6xl font-bold mb-4">Back to Normal</h2>
-          <p className="text-xl opacity-80">Vertical scrolling resumed</p>
-        </div>
-      </section>
     </div>
   );
 }

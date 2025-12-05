@@ -1,7 +1,9 @@
 import VantaDotsBackground from "./components/vantabg";
 import AnimatedText2 from "./components/AnimatedText2";
-import SectionThree from "./components/SectionThree"
+import SectionThree from "./components/SectionThree";
 import MainContent from "./components/mainContent";
+import SectionFour from "./components/SectionFour";
+import Projects from "./components/Projects";
 
 export default function Home() {
   return (
@@ -9,10 +11,11 @@ export default function Home() {
       {/* <Cursor/> */}
       <VantaDotsBackground />
       <div>
-
-      <MainContent/>
-      <AnimatedText2 />
-      <SectionThree/>
+        <MainContent />
+        <AnimatedText2 />
+        <SectionThree />
+        <SectionFour />
+        <Projects/>
       </div>
     </div>
   );

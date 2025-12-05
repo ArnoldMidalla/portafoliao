@@ -10,7 +10,7 @@ export default function MainContent() {
       <div className="h-1/3 w-full"></div>
       <div className="h-1/3 w-full flex flex-col items-center">
         <h1 className="text-lg font-light tracking-tighter">Hey, i'm Arnold</h1>
-        <div className="text-5xl font-medium text-center tracking-tighter">
+        <div className="text-6xl font-medium text-center tracking-tighter">
           {/* Full stack dev
           <br />
           Ui & Ux specialist */}
