@@ -3,7 +3,7 @@
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import GsapCounter from "./GsapCounter";
+import GsapCounter from "../GsapCounter";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,17 +49,17 @@ export default function SectionFour() {
   }, []);
 
   return (
-    <div className="bg-white flex font-dm">
+    <div className="bg-white flex font-dm" id="about">
       <div className="w-1/2 h-dvh flex" ref={imageRef2}>
         {/* <GsapCounter /> */}
-        <div className="h-full w-full flex flex-col py-20">
-          <div className="w-full h-1/3 text-3xl font-medium tracking-tight leading-8 px-6 flex items-center">
+        <div className="h-full w-full flex flex-col py-20 pl-12 pr-6">
+          <div className="w-full h-1/3 text-3xl font-medium tracking-tight leading-8 flex items-center">
             <p>
               Driving measurable growth and engagement through thoughtful design
               and engineering
             </p>
           </div>
-          <div className="w-full h-1/3 tracking-tight leading-5 px-6 flex items-center">
+          <div className="w-full h-1/3 tracking-tight leading-5 flex items-center">
             <p>
               Every product I build starts with understanding user goals and
               translating them into intuitive, high-performance experiences.
@@ -67,7 +67,7 @@ export default function SectionFour() {
               user engagement, retention, and overall business impact
             </p>
           </div>
-          <div className="w-full h-1/3 text-2xl font-medium tracking-tight leading-7 px-6 flex items-center gap-20">
+          <div className="w-full h-1/3 text-2xl font-medium tracking-tight leading-7 flex items-center gap-20">
             <div className="flex flex-col items-center">
               <p className="text-sm font-normal">Years of study</p>
               <GsapCounter to={4} duration={4} />

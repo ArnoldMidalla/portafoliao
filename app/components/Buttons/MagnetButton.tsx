@@ -56,7 +56,7 @@ export default function MagnetButton({
   }, []);
 
   return (
-    <Link href={link || "/"} target="_blank" className="cursor-none">
+    <Link href={link || "/"} target="_blank" className="cursor-none rotate-3 hover:-rotate-5 hover:scale-115 duration-200">
       <div
         ref={wrapperRef}
       className="relative inline-flex items-cenwter justify-center w-12 h-12 cursor-none" // fixed hit area
@@ -65,7 +65,7 @@ export default function MagnetButton({
           ref={innerRef}
           className="absolute pointer-events-none cursor-none" // inner layer moves
         >
-          <Icon size={size || 32} />
+          <Icon size={size || 30} />
         </div>
       </div>
     </Link>

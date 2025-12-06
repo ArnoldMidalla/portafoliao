@@ -52,9 +52,9 @@ export default function SectionThree() {
         <div ref={horizontalRef} className="flex h-screen px-48">
           {/* Panel 1 */}
           <div className="min-w-md h-full flex items-center justify-center py-20">
-            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
               <p className="text-sm absolute top-4 right-4">uno</p>
-              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+              <div className="w-full px-8 flex flex-col gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
                   <IconMap />
                 </div>
@@ -74,9 +74,9 @@ export default function SectionThree() {
 
           {/* Panel 2 */}
           <div className="min-w-md h-full flex items-center justify-center py-20">
-            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
               <p className="text-sm absolute top-4 right-4">dos</p>
-              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+              <div className="w-full px-8 flex flex-col gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
                   <IconDeviceImac />
                 </div>
@@ -95,9 +95,9 @@ export default function SectionThree() {
 
           {/* Panel 3 */}
           <div className="min-w-md h-full flex items-center justify-center py-20">
-            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+            <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
               <p className="text-sm absolute top-4 right-4">tres</p>
-              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+              <div className="w-full px-8 flex flex-col gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
                   <IconAppWindow />
                 </div>
@@ -117,9 +117,9 @@ export default function SectionThree() {
 
           {/* Panel 4 */}
           <div className="min-w-md h-full flex items-center justify-center py-20">
-            <div className="relative border w-full h-[90%] flex justify-center items-center opacity-70 hover:opacity-100 duration-300">
+            <div className="relative border w-full h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
               <p className="text-sm absolute top-4 right-4">cuatro</p>
-              <div className="w-full px-8 flex flex-col gap-2 hover:scale-102 duration-300">
+              <div className="w-full px-8 flex flex-col gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
                   <IconApi />
                 </div>

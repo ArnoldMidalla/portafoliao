@@ -1,9 +1,10 @@
 import VantaDotsBackground from "./components/vantabg";
-import AnimatedText2 from "./components/AnimatedText2";
-import SectionThree from "./components/SectionThree";
-import MainContent from "./components/mainContent";
-import SectionFour from "./components/SectionFour";
-import Projects from "./components/Projects";
+import SectionTwo from "./components/Sections/SectionTwo";
+import SectionThree from "./components/Sections/SectionThree";
+import MainContent from "./components/Sections/mainContent";
+import SectionFour from "./components/Sections/SectionFour";
+import Projects from "./components/Sections/Projects";
+import CTA from "./components/Sections/CTA";
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <VantaDotsBackground />
       <div>
         <MainContent />
-        <AnimatedText2 />
+        <SectionTwo />
         <SectionThree />
         <SectionFour />
-        <Projects/>
+        <Projects />
+        <CTA/>
       </div>
     </div>
   );

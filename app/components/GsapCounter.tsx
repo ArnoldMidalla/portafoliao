@@ -20,6 +20,7 @@ export default function GsapCounter({ to = 590, duration = 10 }) {
         val: to,
         duration,
         ease: "power3.out",
+        delay: 0.5,
         onUpdate: () => {
           if (!el) return;
           el.innerHTML = Math.floor(obj.val).toString();
@@ -27,10 +28,11 @@ export default function GsapCounter({ to = 590, duration = 10 }) {
         scrollTrigger: {
           trigger: el,
           start: "top 80%",
+          
         },
       }
     );
   }, [to, duration]);
 
-  return <span ref={ref} className="font-dm text-5xl font-semibold tracking-tighter ">0</span>;
+  return <span ref={ref} className="font-dm text-6xl font-semibold tracking-tight">0</span>;
 }

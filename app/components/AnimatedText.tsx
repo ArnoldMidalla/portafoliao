@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(SplitText); // <-- your GSAP SplitText file
+gsap.registerPlugin(SplitText);
 
 export default function AnimatedText({ text }: { text: any }) {
   useEffect(() => {

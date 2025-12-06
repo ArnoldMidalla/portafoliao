@@ -9,6 +9,7 @@ interface HoverMagnetButtonProps {
   icon?: any;
   size?: number;
   text?: string;
+  textSize?: string;
 }
 
 function splitChars(str: string) {
@@ -24,6 +25,7 @@ export default function ConcusButton({
   icon: Icon,
   size,
   text = "Hover Me",
+  textSize
 }: HoverMagnetButtonProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -107,7 +109,7 @@ export default function ConcusButton({
             ref={textRef}
             onMouseEnter={handleTextEnter}
             onMouseLeave={handleTextLeave}
-            className="cursor-none mix-blend-difference tracking-normal text-base bg-lime-300 hover:bg-white py-2 px-4.5 font-medium text-black hover:scale-110 duration-300"
+            className={`flex cursor-none mix-blend-difference tracking-normal ${ textSize || "text-base"} bg-lime-300 rotate-2 hover:-rotate-3 hover:bg-white py-2 px-4.5 font-medium text-black hover:scale-110 duration-300 line-clamp-1`}
             >
             {splitChars(text)}
           </span>
