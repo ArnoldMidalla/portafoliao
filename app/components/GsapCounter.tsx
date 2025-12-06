@@ -32,5 +32,5 @@ export default function GsapCounter({ to = 590, duration = 10 }) {
     );
   }, [to, duration]);
 
-  return <span ref={ref} className="font-dm text-5xl font-semibold tracking-tighter leading-0">0</span>;
+  return <span ref={ref} className="font-dm text-5xl font-semibold tracking-tighter ">0</span>;
 }

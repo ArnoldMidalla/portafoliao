@@ -52,33 +52,33 @@ export default function SectionFour() {
     <div className="bg-white flex font-dm">
       <div className="w-1/2 h-dvh flex" ref={imageRef2}>
         {/* <GsapCounter /> */}
-        <div className="w-full h-full flex flex-col gap-4">
-          <div className="w-full h-1/2 pl-8 pr-2 flex items-end">
-            <p className="text-2xl font-medium tracking-tight leading-6.5">
+        <div className="h-full w-full flex flex-col py-20">
+          <div className="w-full h-1/3 text-3xl font-medium tracking-tight leading-8 px-6 flex items-center">
+            <p>
               Driving measurable growth and engagement through thoughtful design
               and engineering
             </p>
           </div>
-          <div className="w-full h-1/2 pl-8 pr-2">
-            <p className="tracking-tight font-light leading-4.5">
+          <div className="w-full h-1/3 tracking-tight leading-5 px-6 flex items-center">
+            <p>
               Every product I build starts with understanding user goals and
               translating them into intuitive, high-performance experiences.
-              From concept to launch, I focus on meaningful results-boosting
+              From concept to launch, I focus on meaningful results—boosting
               user engagement, retention, and overall business impact
             </p>
           </div>
-        </div>
-        <div className="w-60 h-full flex flex-col gap-4">
-          <div className="w-full h-1/2 flex items-end">
-            <div className="flex flex-col items-center  gap-4.5">
-              <GsapCounter to={40} duration={5} />
-              <p className="text-right">+ projects</p>
+          <div className="w-full h-1/3 text-2xl font-medium tracking-tight leading-7 px-6 flex items-center gap-20">
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-normal">Years of study</p>
+              <GsapCounter to={4} duration={4} />
             </div>
-          </div>
-          <div className="w-full h-1/2 flex items-start">
-            <div className="flex flex-col items-center gap-4.5 pt-7">
-              <GsapCounter to={30} duration={5} />
-              <p className="text-right">+ projects</p>
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-normal">Projects completed</p>
+              <GsapCounter to={50} duration={4} />
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-sm font-normal">Smth Smth</p>
+              <GsapCounter to={80} duration={4} />
             </div>
           </div>
         </div>
