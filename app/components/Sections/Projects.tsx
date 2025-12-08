@@ -1,67 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import ConcusButton from "../Buttons/ConcusButton";
-
-const projectsMap = [
-  {
-    id: 1,
-    title: "Campus Marketplace",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 2,
-    title: "Halal Impact Schools",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 3,
-    title: "Business",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 4,
-    title: "Business",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 5,
-    title: "Business",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: 6,
-    title: "Business",
-    image:
-      "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    image2:
-      "https://images.unsplash.com/photo-1640955014216-75201056c829?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
+import { projectsMap } from "../data/projects";
 
 export default function Projects() {
   return (
-    <section className="h-dvh min-w-dvw bg-neutral-900 flex flex-col items-center pt-24 py-8 font-dm text-white">
+    <section className="h-dvh min-w-dvw bg-neutral-900 flex flex-col items-center pt-24 py-8 font-dm text-white" id="project">
       <div className="grid grid-cols-2 md:grid-cols-3 w-full h-full min-w-5xl max-w-5xl gap-8">
         <Link
-          href={`/${projectsMap[0].id}`}
-          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2"
+          href={projectsMap[0].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          target="_blank"
         >
-          <div className="relative overflow-hidden h-full w-full group">
+          <div className="relative overflow-hidden h-full w-full">
             <Image
               src={projectsMap[0].image}
               alt={projectsMap[0].title}
@@ -75,16 +26,17 @@ export default function Projects() {
               className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
           </div>
-          <p className="text-xl font-medium tracking-tight">
+          <p className="text-lg font-medium">
             {projectsMap[0].title}
           </p>
         </Link>
 
         <Link
-          href={`/${projectsMap[1].id}`}
-          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2"
+          href={projectsMap[1].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          target="_blank"
         >
-          <div className="relative overflow-hidden h-full w-full group">
+          <div className="relative overflow-hidden h-full w-full">
             <Image
               src={projectsMap[1].image}
               alt={projectsMap[1].title}
@@ -98,15 +50,16 @@ export default function Projects() {
               className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
           </div>
-          <p className="text-xl font-medium tracking-tight">
+          <p className="text-lg font-medium">
             {projectsMap[1].title}
           </p>
         </Link>
         <Link
-          href={`/${projectsMap[2].id}`}
-          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2"
+          href={projectsMap[2].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          target="_blank"
         >
-          <div className="relative overflow-hidden h-full w-full group">
+          <div className="relative overflow-hidden h-full w-full">
             <Image
               src={projectsMap[2].image}
               alt={projectsMap[2].title}
@@ -120,34 +73,81 @@ export default function Projects() {
               className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
           </div>
-          <p className="text-xl font-medium tracking-tight">
+          <p className="text-lg font-medium">
             {projectsMap[2].title}
           </p>
         </Link>
         <Link
-          href={`/${projectsMap[3].id}`}
-          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2"
+          href={projectsMap[3].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          // target="_blank"
         >
-          <div className="relative overflow-hidden h-full w-full group">
+          <div className="relative overflow-hidden h-full w-full">
             <Image
               src={projectsMap[3].image}
               alt={projectsMap[3].title}
               fill
-              className="object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+              className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
             />
             <Image
               src={projectsMap[3].image2}
               alt={projectsMap[3].title}
               fill
-              className="object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+              className="object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
             />
           </div>
-          <p className="text-xl font-medium tracking-tight">
+          <p className="text-lg font-medium">
             {projectsMap[3].title}
           </p>
         </Link>
+        <Link
+          href={projectsMap[4].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          // target="_blank"
+        >
+          <div className="relative overflow-hidden h-full w-full">
+            <Image
+              src={projectsMap[4].image}
+              alt={projectsMap[4].title}
+              fill
+              className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+            />
+            <Image
+              src={projectsMap[4].image2}
+              alt={projectsMap[4].title}
+              fill
+              className="object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <p className="text-lg font-medium">
+            {projectsMap[4].title}
+          </p>
+        </Link>
+        <Link
+          href={projectsMap[5].liveLink}
+          className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group"
+          target="_blank"
+        >
+          <div className="relative overflow-hidden h-full w-full">
+            <Image
+              src={projectsMap[5].image}
+              alt={projectsMap[5].title}
+              fill
+              className="object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0"
+            />
+            <Image
+              src={projectsMap[5].image2}
+              alt={projectsMap[5].title}
+              fill
+              className="object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <p className="text-lg font-medium">
+            {projectsMap[5].title}
+          </p>
+        </Link>
       </div>
-      <ConcusButton text="Projects" />
+      <ConcusButton text="allProjects" />
     </section>
   );
 }

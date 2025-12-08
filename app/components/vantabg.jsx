@@ -40,8 +40,8 @@ export default function VantaDotsBackground() {
             scaleMobile: 1.0,
             backgroundColor: 0xffffff,
             showLines: false,
-            // color: 0xaeaeae
-            color: 0x666666,
+            color: 0x000000
+            // color: 0x666666,
           });
 
           setVantaEffect(effect);

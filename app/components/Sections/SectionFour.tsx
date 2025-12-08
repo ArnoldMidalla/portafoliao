@@ -49,9 +49,8 @@ export default function SectionFour() {
   }, []);
 
   return (
-    <div className="bg-white flex font-dm" id="about">
+    <div className="bg-white flex font-dm">
       <div className="w-1/2 h-dvh flex" ref={imageRef2}>
-        {/* <GsapCounter /> */}
         <div className="h-full w-full flex flex-col py-20 pl-12 pr-6">
           <div className="w-full h-1/3 text-3xl font-medium tracking-tight leading-8 flex items-center">
             <p>

@@ -49,7 +49,10 @@ export default function SectionThree() {
     <div className="max-w-208 min-w-full font-dm tracking-tight bg-white">
       {/* Horizontal scroll container */}
       <div ref={containerRef} className="relative overflow-hidden">
-        <div ref={horizontalRef} className="flex h-screen px-48">
+        <div ref={horizontalRef} className="flex h-dvh px-48 relative">
+          {/* <p className="text-2xl tracking-tighter opacity-70 top-8 absolute">
+            A man of many talents. Here's a few
+          </p> */}
           {/* Panel 1 */}
           <div className="min-w-md h-full flex items-center justify-center py-20">
             <div className="relative border border-r-0 w-full h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
