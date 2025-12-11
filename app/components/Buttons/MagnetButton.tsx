@@ -8,12 +8,16 @@ interface MyComponentProps {
   icon: any;
   link?: string;
   size?: number;
+  alt?: string;
+  footer?: string;
 }
 
 export default function MagnetButton({
   link,
   icon: Icon,
   size,
+  alt,
+  footer,
 }: MyComponentProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -56,10 +60,17 @@ export default function MagnetButton({
   }, []);
 
   return (
-    <Link href={link || "/"} target="_blank" className="cursor-none rotate-3 hover:-rotate-5 hover:scale-115 duration-200">
+    <Link
+      href={link || "/"}
+      target="_blank"
+      className="cursor-none rotate-3 hover:-rotate-5 hover:scale-115 duration-200"
+      aria-label={alt || `my socials links`}
+    >
       <div
         ref={wrapperRef}
-      className="relative inline-flex items-cenwter justify-center w-12 h-12 cursor-none" // fixed hit area
+        className={`relative inline-flex items-center justify-center w-12 ${
+          footer || "h-12"
+        } cursor-none`}
       >
         <div
           ref={innerRef}

@@ -34,7 +34,7 @@ export default function AnimatedText({ text }: { text: any }) {
             stagger: 0.1,
             ease: "back",
             duration: 1,
-            delay: 1,
+            // delay: 1,
           });
         },
       });

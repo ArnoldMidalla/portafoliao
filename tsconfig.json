@@ -31,7 +31,7 @@
     "**/*.mts",
     "app/components/vantabg.jsx",
     "app/Test.jsx",
-    "app/components/Sections/SectionThree.tsx"
+    "app/Sections/SectionThree.tsx"
   ],
   "exclude": ["node_modules"]
 }

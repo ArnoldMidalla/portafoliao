@@ -12,6 +12,8 @@
   --font-mono: var(--font-geist-mono);
   --font-dm: var(--font-dm-sans);
   --font-grand: var(--font-grand-hotel);
+  --color-primary: #fffffd;
+  --color-secondary: #171717;
 }
 
 /* @media (prefers-color-scheme: dark) {

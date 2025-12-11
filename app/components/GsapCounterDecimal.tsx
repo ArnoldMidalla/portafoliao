@@ -7,12 +7,12 @@ import { IconPlus } from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function GsapCounterDecimal({ to = 590, duration = 10 }) {
+export default function GsapCounter({ to = 590, duration = 10 }) {
   const ref = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
     const el = ref.current;
-    const obj = { val: 0 }; // GSAP animates this object
+    const obj = { val: 0 };
 
     gsap.fromTo(
       obj,
@@ -24,7 +24,7 @@ export default function GsapCounterDecimal({ to = 590, duration = 10 }) {
         delay: 0.2,
         onUpdate: () => {
           if (!el) return;
-          el.innerHTML = Math.floor(obj.val).toString();
+          el.innerHTML = obj.val.toFixed(1); // always 1 decimal
         },
         scrollTrigger: {
           trigger: el,
@@ -37,7 +37,7 @@ export default function GsapCounterDecimal({ to = 590, duration = 10 }) {
   return (
     <div className="flex font-dm font-light gap-0.5">
       <span ref={ref} className="font-dm text-5xl font-semibold tracking-tight">
-        0
+        0.0
       </span>
       <IconPlus size={16} stroke={3} className="mt-1" />
     </div>

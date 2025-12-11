@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import MainContent from "./Sections/mainContent";
+import MainContent from "../Sections/mainContent";
 // import Cursor from "./cursor";
 
 export default function VantaDotsBackground() {
@@ -40,7 +40,7 @@ export default function VantaDotsBackground() {
             scaleMobile: 1.0,
             backgroundColor: 0xffffff,
             showLines: false,
-            color: 0x000000
+            color: 0x000000,
             // color: 0x666666,
           });
 
