@@ -10,6 +10,7 @@ interface HoverMagnetButtonProps {
   size?: number;
   text?: string;
   textSize?: string;
+  nada?: boolean;
 }
 
 function splitChars(str: string) {
@@ -26,6 +27,7 @@ export default function ConcusButton({
   size,
   text = "Hover Me",
   textSize,
+  nada,
 }: HoverMagnetButtonProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -96,15 +98,16 @@ export default function ConcusButton({
   };
 
   return (
-    <Link href={link || "/"} target="_blank" className="cursor-none">
+    <Link
+      href={link || "/"}
+      {...(nada ? {} : { target: "_blank" })}
+      className="cursor-none"
+    >
       <div
         ref={wrapperRef}
         className="relative inline-flex items-center justify-center w-32 h-12 cursor-none"
       >
-        <div
-          ref={innerRef}
-          className="absolute flex items-center gap-2" // remove pointer-events-none
-        >
+        <div ref={innerRef} className="absolute flex items-center gap-2">
           <span
             ref={textRef}
             onMouseEnter={handleTextEnter}

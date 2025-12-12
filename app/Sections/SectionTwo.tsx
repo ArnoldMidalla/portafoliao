@@ -8,6 +8,26 @@ import { IconLink } from "@tabler/icons-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const myStack = [
+  "React",
+  "NextJs",
+  "JavaScript",
+  "Git",
+  "GitHub",
+  "React Native",
+  "Figma",
+  "Supabase",
+  "Neon",
+  "Typescript",
+  "CSS3",
+  "HTML5",
+  "Express",
+  "NodeJs",
+  "MongoDb",
+  "PostgreSql",
+  "Tailwind",
+];
+
 export default function SectionTwo() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +46,7 @@ export default function SectionTwo() {
         scrollTrigger: {
           trigger: container,
           start: "top 80%",
-          end: "top 40%",
+          end: "top 55%",
           scrub: 1,
         },
       });
@@ -40,7 +60,7 @@ export default function SectionTwo() {
   return (
     <div
       ref={sectionRef}
-      className="min-w-dvw h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-12 text-3xl text-center px-6 py-24 tracking-tight"
+      className="min-w-dvw h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-8 text-3xl text-center px-6 py-24 tracking-tight"
     >
       <div className="container max-w-xs text-xl md:max-w-3xl md:text-3xl animate-text">
         <h2>
@@ -48,7 +68,7 @@ export default function SectionTwo() {
           interactive, and visually appealing digital experiences.
         </h2>
       </div>
-      <div className="container max-w-xs md:max-w-3xl text-xl md:text-2xl animate-text font-light">
+      <div className="container max-w-xs md:max-w-3xl text-xl md:text-xl animate-text font-light">
         <h2>
           I build dynamic websites, mobile apps, and responsive dashboards that
           are not only functional but also a joy to interact with. My toolkit
@@ -56,8 +76,18 @@ export default function SectionTwo() {
           PostgreSql amongst other things
         </h2>
       </div>
+      <div className="container max-w-xs md:max-w-3xl text-xl md:text-2xl animate-text font-light flex justify-center flex-wrap space-x-3 space-y-2">
+        {myStack.map((test) => (
+          <div
+            key={test}
+            className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit border border-lime-200 hover:bg-lime-600/20 hover:scale-105 duration-300 tracking-normal"
+          >
+            {test}
+          </div>
+        ))}
+      </div>
       <div className="container max-w-xs md:max-w-3xl text-xl md:text-3xl animate-text">
-        <ConcusButton text="Meeeee" link="/about" />
+        <ConcusButton text="Contact" link="/#contact" nada={true} />
       </div>
     </div>
   );

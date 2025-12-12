@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import AnimatedText from "../components/AnimatedText";
 import MagnetButton from "../components/Buttons/MagnetButton";
 import {
@@ -61,6 +62,12 @@ export default function MainContent() {
           alt="My whatsapp"
         /> */}
       </div>
+      <Link
+        href="/#two"
+        className="absolute text-black bottom-8 text-sm opacity-70 hover:opacity-100 hover:scale-105 cursor-none duration-300"
+      >
+        Scroll down
+      </Link>
     </div>
   );
 }

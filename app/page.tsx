@@ -15,6 +15,7 @@ export default function Home() {
       <VantaDotsBackground />
       <div>
         <MainContent />
+        <div id="two"/>
         <SectionTwo />
         <Title
           text="A man of many talents. Here's a few"

@@ -65,8 +65,8 @@ export default function About() {
         ease: "power1.out",
         scrollTrigger: {
           trigger: text3.current,
-          start: "top 90%",
-          end: "top 60%",
+          start: "top 70%",
+          end: "top 20%",
           scrub: true,
         },
       });

@@ -6,12 +6,14 @@ import { projectsMap } from "@/app/components/data/projects";
 import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 
-export default async function Page({ params }: { params: { id: number } }) {
-  const { id } = await params;
+import { useParams } from "next/navigation";
+
+export default  function Page() {
+    const params = useParams();
+  const { id } =  params;
   console.log(id);
 
-  const project = projectsMap.find((p) => p.id == id);
-  const test = project?.stack;
+  const project = projectsMap.find((p) => p.id == Number(id));
   if (!project) {
     return (
       <section className="min-w-dvw min-h-screen flex justify-center items-center font-dm font-medium text-3xl tracking-tighter bg-primary">
@@ -54,7 +56,7 @@ export default async function Page({ params }: { params: { id: number } }) {
           </div>
           <div className="flex gap-2 flex-wrap w-full justify-end">
             {project.stack.map((test) => (
-              <div className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit bg-lime-200 hover:bg-lime-300 duration-300">
+              <div key={test} className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit bg-lime-200 hover:bg-lime-300 duration-300">
                 {test}
               </div>
             ))}
