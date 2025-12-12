@@ -1,4 +1,9 @@
+"use client";
+
+import ConcusButton from "@/app/components/Buttons/ConcusButton";
+import MagnetButton from "@/app/components/Buttons/MagnetButton";
 import { projectsMap } from "@/app/components/data/projects";
+import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 
 export default async function Page({ params }: { params: { id: number } }) {
@@ -16,10 +21,19 @@ export default async function Page({ params }: { params: { id: number } }) {
   }
   return (
     <section className="min-w-dvw min-h-screen flex justify-center font-dm bg-primary">
-      <main className="min-w-5xl max-w-5xl flex flex-col h-full pt-30 gap-8">
-        <h1 className="text-6xl font-medium tracking-tighter">
-          {project.title}.
-        </h1>
+      <main className="min-w-5xl max-w-5xl flex flex-col h-full pt-30 pb-20 gap-8">
+        <div className="flex justify-between items-center">
+          <h1 className="text-6xl font-medium tracking-tighter">
+            {project.title}.
+          </h1>
+          {project.liveLink === "#" ? null : (
+            <ConcusButton
+              link={project.liveLink}
+              text="live link"
+              icon={IconArrowRight}
+            />
+          ) }
+        </div>
 
         <section className="flex gap-8 max-w-5xl">
           <div className="overflow-hidden w-1/2 h-60 relative">
@@ -52,9 +66,7 @@ export default async function Page({ params }: { params: { id: number } }) {
             <p className="text-3xl tracking-tighter font-medium">
               About this project
             </p>
-            <p className="tracking-tight text-sm">
-              Why I made this project
-            </p>
+            <p className="tracking-tight text-sm">Why I made this project</p>
           </div>
           <div className="flex gap-2 flex-wrap">{project.about}</div>
         </section>

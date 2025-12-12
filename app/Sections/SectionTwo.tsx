@@ -57,7 +57,7 @@ export default function SectionTwo() {
         </h2>
       </div>
       <div className="container max-w-xs md:max-w-3xl text-xl md:text-3xl animate-text">
-        <ConcusButton text="Meeeee" link="/about" icon={IconLink} />
+        <ConcusButton text="Meeeee" link="/about" />
       </div>
     </div>
   );
