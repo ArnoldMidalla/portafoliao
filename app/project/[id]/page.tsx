@@ -9,16 +9,16 @@ export default async function Page({ params }: { params: { id: number } }) {
   const test = project?.stack;
   if (!project) {
     return (
-      <section className="min-w-dvw min-h-screen flex justify-center items-center font-dm font-medium text-3xl tracking-tighter">
+      <section className="min-w-dvw min-h-screen flex justify-center items-center font-dm font-medium text-3xl tracking-tighter bg-primary">
         <h1>Project wasn't not found</h1>
       </section>
     );
   }
   return (
-    <section className="min-w-dvw min-h-screen flex justify-center font-dm">
+    <section className="min-w-dvw min-h-screen flex justify-center font-dm bg-primary">
       <main className="min-w-5xl max-w-5xl flex flex-col h-full pt-30 gap-8">
         <h1 className="text-6xl font-medium tracking-tighter">
-          {project.title}
+          {project.title}.
         </h1>
 
         <section className="flex gap-8 max-w-5xl">
@@ -31,16 +31,16 @@ export default async function Page({ params }: { params: { id: number } }) {
           </div>
         </section>
 
-        <section className="flex justify-between border">
-          <div className="flex flex-col">
+        <section className="flex justify-between">
+          <div className="flex flex-col max-w-sm min-w-sm">
             <p className="text-3xl tracking-tighter font-medium">Tech Stack</p>
-            <p className="tracking-tight">
+            <p className="tracking-tight text-sm">
               The libraries and frameworks I used in this project
             </p>
           </div>
-          <div className="flex gap-2 flex-wrap max-w-2xl w-fit border justify-end">
+          <div className="flex gap-2 flex-wrap w-full justify-end">
             {project.stack.map((test) => (
-              <div className="border px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit">
+              <div className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit bg-lime-200 hover:bg-lime-300 duration-300">
                 {test}
               </div>
             ))}
@@ -48,17 +48,16 @@ export default async function Page({ params }: { params: { id: number } }) {
         </section>
 
         <section className="flex gap-4">
-          <div className="flex flex-col">
-            <p className="text-3xl tracking-tighter font-medium">About this project</p>
-            {/* <p className="tracking-tight">
-              The libraries and frameworks I used in this project
-            </p> */}
+          <div className="flex flex-col max-w-sm min-w-sm">
+            <p className="text-3xl tracking-tighter font-medium">
+              About this project
+            </p>
+            <p className="tracking-tight text-sm">
+              Why I made this project
+            </p>
           </div>
-          <div className="flex gap-2 flex-wrap w-full">
-            {project.about}
-          </div>
+          <div className="flex gap-2 flex-wrap">{project.about}</div>
         </section>
-
       </main>
     </section>
   );

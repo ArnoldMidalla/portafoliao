@@ -16,7 +16,11 @@ export default function Home() {
       <div>
         <MainContent />
         <SectionTwo />
-        <Title text="A man of many talents. Here's a few" linkId={"#points"} />
+        <Title
+          text="A man of many talents. Here's a few"
+          linkId={"#points"}
+          // dis={"hidden md:block"}
+        />
         <div id="points" />
         <SectionThree />
         <Title text="About meee" pl={"bg-white"} linkId={"#about"} />

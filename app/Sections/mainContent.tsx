@@ -16,10 +16,10 @@ export default function MainContent() {
     <div className="relative z-10 flex flex-col items-center justify-center h-dvh min-w-dvw font-dm text-black">
       <div className="h-1/3 w-full"></div>
       <div className="h-1/3 w-full flex flex-col gap-1 items-center">
-        <h1 className="text-lg font-light tracking-tight">
+        <h1 className="text-base md:text-lg font-light tracking-tight">
           <AnimatedText text={"Hey, I'm Arnold"} />
         </h1>
-        <div className="text-5xl md:text-6xl font-medium text-center tracking-tight">
+        <div className="text-[2.4rem] leading-11 md:leading-15 md:text-6xl font-medium text-center tracking-tight">
           <AnimatedText
             text={
               <>

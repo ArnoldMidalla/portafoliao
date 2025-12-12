@@ -36,7 +36,7 @@ export default function GsapCounterDecimal({ to = 590, duration = 10 }) {
 
   return (
     <div className="flex font-dm font-light gap-0.5">
-      <span ref={ref} className="font-dm text-5xl font-semibold tracking-tight">
+      <span ref={ref} className="font-dm text-4xl md:text-5xl font-semibold tracking-tight">
         0
       </span>
       <IconPlus size={16} stroke={3} className="mt-1" />

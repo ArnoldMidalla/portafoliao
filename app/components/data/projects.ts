@@ -47,7 +47,7 @@ export const projectsMap = [
   },
   {
     id: 3,
-    title: "Youtube but with Udemy features",
+    title: "Youtube with Udemy features",
     image: "/projects/ytCourse1.png",
     image2: "/projects/ytCourse2.png",
     liveLink: "#",
