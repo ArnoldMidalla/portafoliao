@@ -3,6 +3,7 @@ import { DM_Sans, Geist, Geist_Mono, Grand_Hotel } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/navbar";
 import Cursor from "./components/cursor";
+import { Toaster } from "sonner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -45,6 +46,7 @@ export default function RootLayout({
       >
         <Nav/>
         <Cursor/>
+        <Toaster richColors/>
         {children}
       </body>
     </html>

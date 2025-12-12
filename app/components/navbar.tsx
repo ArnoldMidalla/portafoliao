@@ -16,7 +16,10 @@ export default function Nav() {
             <HoverChars text="about" />
           </Link>
           <Link href={"/#project"} className="cursor-none hover:scale-125 duration-300" draggable={false}>
-            <HoverChars text="work" />
+            <HoverChars text="projects" />
+          </Link>
+          <Link href={"/#contact"} className="cursor-none hover:scale-125 duration-300" draggable={false}>
+            <HoverChars text="contact" />
           </Link>
         </div>
       </main>

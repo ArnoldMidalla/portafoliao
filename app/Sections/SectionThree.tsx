@@ -81,7 +81,7 @@ export default function SectionThree() {
           >
             {/* Panel 1 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative border border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">uno</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -103,7 +103,7 @@ export default function SectionThree() {
 
             {/* Panel 2 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative border border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">dos</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -125,7 +125,7 @@ export default function SectionThree() {
 
             {/* Panel 3 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative border border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">tres</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -146,7 +146,7 @@ export default function SectionThree() {
 
             {/* Panel 4 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative border w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">cuatro</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -174,7 +174,7 @@ export default function SectionThree() {
 
           {/* panel 1 */}
           <div className="w-full h-full flex items-center justify-center py-6 animate-text">
-            <div className="relative border w-full h-full py-10 md:h-[90%] flex justify-center items-center">
+            <div className="relative  border-lime-300 border-2 w-full h-full py-10 md:h-[90%] flex justify-center items-center">
               <p className="text-sm absolute top-4 right-4">uno</p>
               <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -196,7 +196,7 @@ export default function SectionThree() {
 
           {/* Panel 2 */}
           <div className="w-full h-full flex items-center justify-center py-6 animate-text">
-            <div className="relative border w-full h-full py-10 md:h-[90%] flex justify-center items-center">
+            <div className="relative  border-lime-300 border-2 w-full h-full py-10 md:h-[90%] flex justify-center items-center">
               <p className="text-sm absolute top-4 right-4">dos</p>
               <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -218,7 +218,7 @@ export default function SectionThree() {
 
           {/* Panel 3 */}
           <div className="w-full h-full flex items-center justify-center py-6 animate-text">
-            <div className="relative border w-full h-full py-10 md:h-[90%] flex justify-center items-center">
+            <div className="relative  border-lime-300 border-2 w-full h-full py-10 md:h-[90%] flex justify-center items-center">
               <p className="text-sm absolute top-4 right-4">tres</p>
               <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -239,7 +239,7 @@ export default function SectionThree() {
 
           {/* Panel 4 */}
           <div className="w-full h-full flex items-center justify-center py-6 animate-text">
-            <div className="relative border w-full h-full py-10 md:h-[90%] flex justify-center items-center">
+            <div className="relative  border-lime-300 border-2 w-full h-full py-10 md:h-[90%] flex justify-center items-center">
               <p className="text-sm absolute top-4 right-4">cuatro</p>
               <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                 <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">

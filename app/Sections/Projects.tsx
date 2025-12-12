@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -78,9 +78,8 @@ export default function Projects() {
               />
             </div>
             <div className="flex justify-between items-center">
-
-            <p className="text-lg font-medium">{projects.title}</p>
-            <IconArrowRight/>
+              <p className="text-lg font-medium">{projects.title}</p>
+              <IconArrowRight />
             </div>
           </Link>
         ))}

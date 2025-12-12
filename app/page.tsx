@@ -4,7 +4,7 @@ import SectionThree from "./Sections/SectionThree";
 import MainContent from "./Sections/mainContent";
 import SectionFour from "./Sections/About";
 import Projects from "./Sections/Projects";
-import CTA from "./Sections/CTA";
+import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 import Title from "./components/title";
 
@@ -33,7 +33,8 @@ export default function Home() {
         />
         <div id="projects" />
         <Projects />
-        <CTA />
+        <div id="contact"/>
+        <Contact />
         <Footer />
       </div>
     </div>
