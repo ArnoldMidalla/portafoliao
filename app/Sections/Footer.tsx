@@ -14,16 +14,16 @@ import {
 export default function Footer() {
   return (
     <div className="min-w-dvw flex justify-center bg-neutral-900">
-      <main className="flex justify-between flex-col gap-4 md:gap-0 md:flex-row md:w-5xl h-28 text-white/70 items-center font-dm">
+      <main className="flex justify-between flex-col max-w-xs gap-4 md:gap-0 md:flex-row md:max-w-5xl w-full min-h-16 md:h-28 text-white/70 items-center font-dm py-4 md:py-0">
         <Link
           href={"/"}
-          className="font-grand text-3xl cursor-none hidden md:block"
+          className="font-grand text-2xl md:text-3xl cursor-none block"
           draggable={false}
         >
           arnold midalla
         </Link>
         {/* <p className="text-sm">copyright 2025 arnold midalla</p> */}
-        {/* <div className="flex items-center">
+        <div className="flex items-center">
             <MagnetButton
             link="https://www.linkedin.com/in/midallaarnold/"
             icon={IconBrandLinkedin}
@@ -62,7 +62,7 @@ export default function Footer() {
             size={20}
             footer="h-6"
           />
-        </div> */}
+        </div>
       </main>
     </div>
   );

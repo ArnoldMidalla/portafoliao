@@ -80,14 +80,14 @@ export default function Contact() {
   }
 
   return (
-    <div className="min-w-dvw bg-white flex justify-center font-dm md:py-8 border-b-2 ">
+    <div className="min-w-dvw bg-white flex justify-center font-dm md:py-8 border-b-2 border-lime-300 ">
       <main className="w-dvw md:w-5xl min-h-112 flex flex-col md:flex-row">
         <div className="w-full md:w-1/3 h-full flex flex-col items-center justify-center md:border-2 border-black text-center md:text-left">
-          <div className="w-full px-8 py-12 border h-98 md:h-full flex flex-col justify-between">
-            <p className="text-4xl font-semibold tracking-tighter">
+          <div className="w-full px-8 py-12 border h-86 md:h-full flex flex-col justify-between">
+            <p className="text-3xl md:text-4xl font-semibold tracking-tighter">
               Lets get in touch
             </p>
-            <p className="text-lg font-normal tracking-tight">
+            <p className="text-base md:text-lg font-normal tracking-tight">
               Dont be afraid to say hello
             </p>
               <Details
@@ -130,7 +130,7 @@ export default function Contact() {
                       <Input
                         placeholder="John Doe"
                         {...field}
-                        className="rounded-none cursor-none border-lime-200"
+                        className="rounded-none cursor-none border-lime-200 text-sm"
                       />
                     </FormControl>
                     <FormMessage />
@@ -148,7 +148,7 @@ export default function Contact() {
                       <Input
                         placeholder="example@gmail.com"
                         {...field}
-                        className="rounded-none cursor-none border-lime-200"
+                        className="rounded-none cursor-none border-lime-200 text-sm"
                       />
                     </FormControl>
                     <FormMessage />
@@ -167,7 +167,7 @@ export default function Contact() {
                         rows={4}
                         placeholder="How can I help you?"
                         {...field}
-                        className="rounded-none cursor-none border-lime-200"
+                        className="rounded-none cursor-none border-lime-200 text-sm"
                       />
                     </FormControl>
                     <FormMessage />

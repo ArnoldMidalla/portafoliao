@@ -22,6 +22,13 @@ export const projectsMap = [
       "React Hook Form",
       "Lucid React",
     ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
+    ],
   },
   {
     id: 2,
@@ -44,6 +51,13 @@ export const projectsMap = [
       "Lucid React",
       "Markdown It",
     ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
+    ],
   },
   {
     id: 3,
@@ -65,6 +79,13 @@ export const projectsMap = [
       "he",
       "Sonner",
     ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
+    ],
   },
   {
     id: 4,
@@ -80,6 +101,14 @@ export const projectsMap = [
       "PostgreSql",
       "Recharts",
       "React PDF Renderer",
+      "Supabase",
+    ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
     ],
   },
   {
@@ -89,7 +118,8 @@ export const projectsMap = [
     image2: "/projects/medium2.png",
     liveLink: "#",
     type: "app",
-    about: "A recreation of the Medium app with features such as tab switching, liking, commenting, and following authors",
+    about:
+      "A recreation of the Medium app with features such as tab switching, liking, commenting, and following authors",
     stack: [
       "React Native",
       // "PostgreSql",
@@ -97,6 +127,13 @@ export const projectsMap = [
       "Expo",
       "Typescript",
       "Lucid React Native",
+    ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
     ],
   },
   {
@@ -106,7 +143,8 @@ export const projectsMap = [
     image2: "/projects/bankApp2.png",
     liveLink: "#",
     type: "app",
-    about: "A banking app where users can easily make and see previous transfers, access virtual cards, etc",
+    about:
+      "A banking app where users can easily make and see previous transfers, access virtual cards, etc",
     stack: [
       "React Native",
       // "PostgreSql",
@@ -114,6 +152,13 @@ export const projectsMap = [
       "Expo",
       "Typescript",
       "Lucid React Native",
+    ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
     ],
   },
   // {

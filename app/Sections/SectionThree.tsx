@@ -71,7 +71,7 @@ export default function SectionThree() {
 
   return (
     <>
-      <div className="max-w-6xl md:max-w-6xl min-w-full font-dm tracking-tight bg-white hidden md:block font-dm">
+      <div className="max-w-6xl md:max-w-6xl min-w-full font-dm tracking-tight bg-white hidden md:block">
         {/* change to max-w-208 if bugs */}
         {/* Horizontal scroll container */}
         <div ref={containerRef} className="relative overflow-hidden">
@@ -81,7 +81,7 @@ export default function SectionThree() {
           >
             {/* Panel 1 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-95 flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">uno</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -103,7 +103,7 @@ export default function SectionThree() {
 
             {/* Panel 2 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-95 flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">dos</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -125,7 +125,7 @@ export default function SectionThree() {
 
             {/* Panel 3 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 border-r-0 w-full h-[50%] md:h-95 flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">tres</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -146,7 +146,7 @@ export default function SectionThree() {
 
             {/* Panel 4 */}
             <div className="min-w-sm max-w-sm md:min-w-md md:max-w-md h-full flex items-center justify-center py-20">
-              <div className="relative  border-lime-300 border-2 w-full h-[50%] md:h-[90%] flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
+              <div className="relative  border-lime-300 border-2 w-full h-[50%] md:h-95 flex justify-center items-center group opacity-70 hover:opacity-100 duration-300">
                 <p className="text-sm absolute top-4 right-4">cuatro</p>
                 <div className="w-full px-8 flex flex-col md:gap-2 group-hover:scale-102 duration-300">
                   <div className="flex justify-center items-center p-4 bg-lime-300 w-fit mb-4">
@@ -169,7 +169,7 @@ export default function SectionThree() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center font-dm bg-white">
         <div className="flex flex-col flex-1 md:hidden max-w-xs h-full" ref={sectionRef}>
 
           {/* panel 1 */}

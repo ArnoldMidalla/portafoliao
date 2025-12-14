@@ -39,7 +39,7 @@ export default function GsapCounter({ to = 590, duration = 10 }) {
       <span ref={ref} className="font-dm text-4xl md:text-5xl font-semibold tracking-tight">
         0.0
       </span>
-      <IconPlus size={16} stroke={3} className="mt-1" />
+      <IconPlus size={14} stroke={4} className="mt-1" />
     </div>
   );
 }

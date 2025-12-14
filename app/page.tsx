@@ -1,12 +1,12 @@
 import VantaDotsBackground from "./components/vantabg";
-import SectionTwo from "./Sections/SectionTwo";
 import SectionThree from "./Sections/SectionThree";
 import MainContent from "./Sections/mainContent";
-import SectionFour from "./Sections/About";
+import SectionTwo from "./Sections/SectionTwo";
 import Projects from "./Sections/Projects";
 import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 import Title from "./components/title";
+import About from "./Sections/About";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <VantaDotsBackground />
       <div>
         <MainContent />
-        <div id="two"/>
+        <div id="two" />
         <SectionTwo />
         <Title
           text="A man of many talents. Here's a few"
@@ -26,7 +26,7 @@ export default function Home() {
         <SectionThree />
         <Title text="About meee" pl={"bg-white"} linkId={"#about"} />
         <div id="about" />
-        <SectionFour />
+        <About />
         <Title
           text="Here are a few of my projects"
           pl={"bg-neutral-900 text-white"}
@@ -34,7 +34,7 @@ export default function Home() {
         />
         <div id="projects" />
         <Projects />
-        <div id="contact"/>
+        <div id="contact" />
         <Contact />
         <Footer />
       </div>

@@ -60,15 +60,15 @@ export default function SectionTwo() {
   return (
     <div
       ref={sectionRef}
-      className="min-w-dvw h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-8 text-3xl text-center px-6 py-24 tracking-tight"
+      className="min-w-dvw min-h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-8 text-3xl text-center px-6 py-24 tracking-tight"
     >
-      <div className="container max-w-xs text-xl md:max-w-3xl md:text-3xl animate-text">
+      <div className="container max-w-xs text-xl md:max-w-3xl md:text-3xl animate-text font-medium md:font-normal">
         <h2>
           I'm Arnold - a Web & App Developer turning ideas into good,
           interactive, and visually appealing digital experiences.
         </h2>
       </div>
-      <div className="container max-w-xs md:max-w-3xl text-xl md:text-xl animate-text font-light">
+      <div className="container max-w-xs md:max-w-3xl text-lg md:text-xl animate-text font-light">
         <h2>
           I build dynamic websites, mobile apps, and responsive dashboards that
           are not only functional but also a joy to interact with. My toolkit

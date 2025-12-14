@@ -112,7 +112,7 @@ export default function ConcusButton({
             ref={textRef}
             onMouseEnter={handleTextEnter}
             onMouseLeave={handleTextLeave}
-            className={`flex cursor-none mix-blend-difference tracking-normal ${
+            className={`flex cursor-none  tracking-normal ${
               textSize || "text-base"
             } bg-lime-300 border border-lime-400 rotate-2 hover:-rotate-3 hover:bg-white py-2 px-4.5 font-medium text-black hover:scale-110 duration-300 line-clamp-1 flex items-center`}
           >
