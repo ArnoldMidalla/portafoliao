@@ -18,10 +18,18 @@ export async function POST(req: Request) {
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "midallaarnold@gmail.com",
       subject: `New message from ${name}`,
+      // html: `
+      //   <div style="font-family:sans-serif; line-height:1.6">
+      //     <h2>New Contact Message</h2>
+      //     <p><strong>Name:</strong> ${name}</p>
+      //     <p><strong>Email:</strong> ${email}</p>
+      //     <p><strong>Message:</strong></p>
+      //     <p>${message}</p>
+      //   </div>
+      // `,
       html: `
         <div style="font-family:sans-serif; line-height:1.6">
-          <h2>New Contact Message</h2>
-          <p><strong>Name:</strong> ${name}</p>
+          <h3>New Contact Message from ${name}</h3>
           <p><strong>Email:</strong> ${email}</p>
           <p><strong>Message:</strong></p>
           <p>${message}</p>
