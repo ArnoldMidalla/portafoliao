@@ -27,24 +27,28 @@ export default function Footer() {
             <MagnetButton
             link="https://www.linkedin.com/in/midallaarnold/"
             icon={IconBrandLinkedin}
+            alt="My linkedin"
             size={20}
             footer="h-6"
           />
           <MagnetButton
             link="https://www.github.com/arnoldmidalla/"
             icon={IconBrandGithub}
+            alt="My Github"
             size={20}
             footer="h-6"
           />
           <MagnetButton
             link="https://www.twitter.com/ArnoldIsADev"
             icon={IconBrandTwitter}
+            alt="My Twitter"
             size={20}
             footer="h-6"
           />
           <MagnetButton
             link="https://www.instagram.com/thyinstantgram/"
             icon={IconBrandInstagram}
+            alt="My Instagram"
             size={20}
             footer="h-6"
           />
@@ -58,7 +62,15 @@ export default function Footer() {
           <MagnetButton
             link="https://api.whatsapp.com/send?phone=+2348065088147"
             icon={IconBrandWhatsapp}
-            alt="My whatsapp"
+            alt="My Whatsapp"
+            size={20}
+            footer="h-6"
+          />
+          
+          <MagnetButton
+            link="https://www.tiktok.com/@arnoldmidalla.dev/"
+            icon={IconBrandWhatsapp}
+            alt="My Tiktok"
             size={20}
             footer="h-6"
           />
