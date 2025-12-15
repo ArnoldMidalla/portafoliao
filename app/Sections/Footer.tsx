@@ -6,6 +6,7 @@ import {
   IconBrandGithub,
   IconBrandInstagram,
   IconBrandLinkedin,
+  IconBrandTiktok,
   IconBrandTwitter,
   IconBrandWhatsapp,
   IconMail,
@@ -69,7 +70,7 @@ export default function Footer() {
           
           <MagnetButton
             link="https://www.tiktok.com/@arnoldmidalla.dev/"
-            icon={IconBrandWhatsapp}
+            icon={IconBrandTiktok}
             alt="My Tiktok"
             size={20}
             footer="h-6"
