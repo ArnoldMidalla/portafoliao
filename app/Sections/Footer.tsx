@@ -47,7 +47,7 @@ export default function Footer() {
             footer="h-6"
           />
           <MagnetButton
-            link="https://www.instagram.com/thyinstantgram/"
+            link="https://www.instagram.com/midallaarnold/"
             icon={IconBrandInstagram}
             alt="My Instagram"
             size={20}
