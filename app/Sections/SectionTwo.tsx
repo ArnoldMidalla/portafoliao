@@ -52,6 +52,24 @@ export default function SectionTwo() {
       });
     });
 
+    const containers2 = sectionRef.current.querySelectorAll(".animate-text2");
+
+    containers2.forEach((container2) => {
+      gsap.set(container2, { opacity: 0, scale: 0.8, filter: "blur(4px)" });
+      gsap.to(container2, {
+        opacity: 1,
+        scale: 1,
+        filter: "blur(0px)",
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: container2,
+          start: "top 95%",
+          end: "top 70%",
+          scrub: 1,
+        },
+      });
+    });
+
     ScrollTrigger.refresh();
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -86,7 +104,7 @@ export default function SectionTwo() {
           </div>
         ))}
       </div>
-      <div className="container max-w-xs md:max-w-3xl text-xl md:text-3xl animate-text">
+      <div className="container2 max-w-xs md:max-w-3xl text-xl md:text-3xl animate-text2">
         <ConcusButton text="Contact" link="/#contact" nada={true} />
       </div>
     </div>

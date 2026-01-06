@@ -8,7 +8,7 @@ export default function Nav() {
         <Link href={"/"} className="font-grand text-3xl cursor-none" draggable={false}>
           arnold midalla
         </Link>
-        <div className="flex w-xs md:w-fit justify-between md:justify-end md:gap-8 font-dm tracking-tighter">
+        <div className="flex w-xs md:w-fit justify-center gap-8 md:justify-end font-dm tracking-tighter">
           {/* <Link href={"/"} className="cursor-none hover:scale-125 duration-300" draggable={false}>
             <HoverChars text="home" />
           </Link> */}

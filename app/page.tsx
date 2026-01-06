@@ -10,7 +10,7 @@ import About from "./Sections/About";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center font-dmSans cursor-none bg-amber/20 overflow-x-hidden max-w-dvw">
+    <div className="flex flex-col min-h-screen items-center justify- font-dmSans cursor-none bg-amber/20 overflow-x-hidden max-w-dvw">
       {/* <Cursor/> */}
       <VantaDotsBackground />
       <div>

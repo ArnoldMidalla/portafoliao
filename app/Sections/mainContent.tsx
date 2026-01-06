@@ -32,7 +32,7 @@ export default function MainContent() {
           />
         </div>
       </div>
-      <div className="h-1/3 w-full px-12 flex justify-center items-center gap-8">
+      <div className="h-1/3 w-full px-12 flex justify-center items-center gap-4 sm:gap-8">
         <MagnetButton
           link="https://www.linkedin.com/in/midallaarnold/"
           icon={IconBrandLinkedin}
