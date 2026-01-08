@@ -13,19 +13,25 @@ import {
 } from "@tabler/icons-react";
 
 export default function Footer() {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear();
+  console.log(currentYear); // e.g., 2026
   return (
     <div className="min-w-dvw flex justify-center bg-neutral-900">
       <main className="flex justify-between flex-col max-w-xs gap-4 md:gap-0 md:flex-row md:max-w-5xl w-full min-h-16 md:h-28 text-white/70 items-center font-dm py-4 md:py-0">
-        <Link
-          href={"/"}
-          className="font-grand text-2xl md:text-3xl cursor-none block"
-          draggable={false}
-        >
-          arnold midalla
-        </Link>
+        <div className="flex flex-col items-center md:items-end">
+          <Link
+            href={"/"}
+            className="font-grand text-2xl md:text-3xl cursor-none block leading-6"
+            draggable={false}
+          >
+            arnold midalla
+          </Link>
+          <p className="text-xs font-dm font-medium">&copy;{currentYear}</p>
+        </div>
         {/* <p className="text-sm">copyright 2025 arnold midalla</p> */}
         <div className="flex items-center">
-            <MagnetButton
+          <MagnetButton
             link="https://www.linkedin.com/in/midallaarnold/"
             icon={IconBrandLinkedin}
             alt="My linkedin"
@@ -67,7 +73,7 @@ export default function Footer() {
             size={20}
             footer="h-6"
           />
-          
+
           <MagnetButton
             link="https://www.tiktok.com/@arnoldmidalla.dev/"
             icon={IconBrandTiktok}
