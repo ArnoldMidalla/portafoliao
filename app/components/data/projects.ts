@@ -1,6 +1,10 @@
 export const projectsMap = [
   {
+    image3: "",
+    video: "",
+    type: "",
     id: 1,
+    year: 2025,
     title: "Campus Marketplace",
     image: "/projects/campus1.png",
     image2: "/projects/campus2.png",
@@ -31,7 +35,11 @@ export const projectsMap = [
     ],
   },
   {
+    image3: "",
+    video: "",
+    type: "",
     id: 2,
+    year: 2025,
     title: "Startups Pitch Website",
     image: "/projects/startup1.png",
     image2: "/projects/startup2.png",
@@ -60,7 +68,11 @@ export const projectsMap = [
     ],
   },
   {
+    image3: "",
+    video: "",
+    type: "",
     id: 3,
+    year: 2025,
     title: "Youtube with Udemy features",
     image: "/projects/ytCourse1.png",
     image2: "/projects/ytCourse2.png",
@@ -88,7 +100,11 @@ export const projectsMap = [
     ],
   },
   {
+    image3: "",
+    video: "",
+    type: "",
     id: 4,
+    year: 2025,
     title: "School Results Checker",
     image: "/projects/halal2.png",
     image2: "/projects/halal1.png",
@@ -111,12 +127,55 @@ export const projectsMap = [
       "CRUD features on product listings",
     ],
   },
+
+  // {
+  //   id: 7,
+  // year: 2025,
+  //   title: "Groceries Delivery Website",
+  //   image: "/projects/grocery1.png",
+  //   image2: "/projects/grocery2.png",
+  //   liveLink: "https://grocery-delivery-website-five.vercel.app/",
+  // },
+];
+
+export const App = [
+  {
+    id: 7,
+    year: 2026,
+    title: "Events & Vendor Booking",
+    image: "/projects/binaImg.png",
+    image2: "/projects/binaimg2.png",
+    image3: "/projects/binaImg3.png",
+    liveLink: "#",
+    video: "/projects/binaVidC.mp4",
+    type: "app",
+    about:
+      "This is an all-in-one app where people can easily find events to go to and book vendors for their own respective events",
+    stack: [
+      "React Native",
+      // "PostgreSql",
+      "Nativewind",
+      "Expo",
+      "Typescript",
+      "Lucid React Native",
+    ],
+    feat: [
+      "Responsive Design",
+      "Email and Google Authentication",
+      "Realtime listing and uploads",
+      "Items browsing with filters",
+      "CRUD features on product listings",
+    ],
+  },
   {
     id: 5,
+    year: 2025,
     title: "Medium App Recreation",
     image: "/projects/medium1.png",
     image2: "/projects/medium2.png",
     liveLink: "#",
+    image3: "",
+    video: "",
     type: "app",
     about:
       "A recreation of the Medium app with features such as tab switching, liking, commenting, and following authors",
@@ -138,10 +197,13 @@ export const projectsMap = [
   },
   {
     id: 6,
+    year: 2025,
     title: "Banking App",
     image: "/projects/bankApp1.png",
     image2: "/projects/bankApp2.png",
     liveLink: "#",
+    image3: "",
+    video: "",
     type: "app",
     about:
       "A banking app where users can easily make and see previous transfers, access virtual cards, etc",
@@ -161,11 +223,4 @@ export const projectsMap = [
       "CRUD features on product listings",
     ],
   },
-  // {
-  //   id: 7,
-  //   title: "Groceries Delivery Website",
-  //   image: "/projects/grocery1.png",
-  //   image2: "/projects/grocery2.png",
-  //   liveLink: "https://grocery-delivery-website-five.vercel.app/",
-  // },
 ];

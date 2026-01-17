@@ -2,7 +2,7 @@
 
 import ConcusButton from "@/app/components/Buttons/ConcusButton";
 import MagnetButton from "@/app/components/Buttons/MagnetButton";
-import { projectsMap } from "@/app/components/data/projects";
+import { App, projectsMap } from "@/app/components/data/projects";
 import { IconArrowRight } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -13,7 +13,9 @@ export default function Page() {
   const { id } = params;
   console.log(id);
 
-  const project = projectsMap.find((p) => p.id == Number(id));
+  const project =
+    projectsMap.find((p) => p.id == Number(id)) ||
+    App.find((p) => p.id == Number(id));
   if (!project) {
     return (
       <section className="min-w-dvw min-h-screen flex justify-center items-center font-dm font-medium text-3xl tracking-tighter bg-primary">
@@ -42,7 +44,7 @@ export default function Page() {
         <section className="flex gap-4 justify-center md:justify-start">
           <div className="text-right md:text-left">
             <p className="text-sm opacity-60">Year</p>
-            <p className="font-medium tracking-tight">2025</p>
+            <p className="font-medium tracking-tight">{project.year}</p>
           </div>
           <div className="text-left">
             <p className="text-sm opacity-60">Role</p>
@@ -50,31 +52,63 @@ export default function Page() {
           </div>
         </section>
 
-        {/* IMages */}
+        {/* Images */}
         <section
-          className={`${
-            project.type === "app" ? "flex-col " : "flex-row "
-          }flex md:flex-row gap-8 max-w-xs md:max-w-5xl`}
+          className={`flex ${
+            project.type === "app" ? "flex-col" : "flex-row"
+          } md:flex-row gap-8 max-w-xs md:max-w-5xl`}
         >
-          <div
-            className={`${
-              project.type === "app" ? "min-h-100 " : "h-40"
-            }overflow-hidden w-full md:w-1/2  md:h-60 relative hover:shadow-lg duration-300 hover:-translate-y-0.5`}
-          >
-            <Image
-              src={project.image}
-              alt=""
-              fill
-              className={
-                project.type === "app" ? "object-contain" : "object-cover"
-              }
-            />
-          </div>
+          {project.video ? (
+            <>
+              <div className="overflow-hidden w-full md:w-1/2 h-100 relative hover:shadow-lg duration-300 hover:-translate-y-0.5">
+                <video
+                  className="w-full h-full object-contain"
+                  controls={false}
+                  preload="none"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                >
+                  <source src={project.video} type="video/mp4" />
+                </video>
+              </div>
+              <div
+                className={`${
+                  project.type === "app" ? "min-h-100 " : "h-60 "
+                }overflow-hidden w-full md:w-1/2 md:h-60 relative hover:shadow-lg duration-300 hover:-translate-y-0.5`}
+              >
+                <Image
+                  src={project.image3}
+                  alt=""
+                  fill
+                  className={
+                    project.type === "app" ? "object-contain" : "object-cover"
+                  }
+                />
+              </div>
+            </>
+          ) : (
+            <div
+              className={`${
+                project.type === "app" ? "min-h-100 " : "h-40 "
+              }overflow-hidden w-full md:w-1/2 md:h-60 relative hover:shadow-lg duration-300 hover:-translate-y-0.5`}
+            >
+              <Image
+                src={project.image}
+                alt=""
+                fill
+                className={
+                  project.type === "app" ? "object-contain" : "object-cover"
+                }
+              />
+            </div>
+          )}
 
           <div
             className={`${
-              project.type === "app" ? "min-h-100 " : "h-40"
-            }overflow-hidden w-full md:w-1/2  md:h-60 relative hover:shadow-lg duration-300 hover:-translate-y-0.5`}
+              project.type === "app" ? "min-h-100 " : "h-40 "
+            }overflow-hidden w-full md:w-1/2 md:h-60 relative hover:shadow-lg duration-300 hover:-translate-y-0.5`}
           >
             <Image
               src={project.image2}
@@ -99,7 +133,7 @@ export default function Page() {
             {project.stack.map((test) => (
               <div
                 key={test}
-                className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit border bg-lime-100 border-lime-400 hover:bg-lime-200 duration-300 hover:-translate-y-0.5 hover:shadow-lg/5"
+                className="px-3 py-1.5 w-fitll text-sm font-medium h-fit border bg-lime-100 border-lime-400 hover:bg-lime-200 duration-300 hover:-translate-y-0.5 hover:shadow-lg/5 rounded-full"
               >
                 {test}
               </div>
@@ -130,7 +164,7 @@ export default function Page() {
             {project.feat?.map((features) => (
               <div
                 key={features}
-                className="px-3 py-1.5 w-fit rounded-full text-sm font-medium h-fit bg-lime-200 hover:bg-lime-300 duration-300"
+                className="px-3 py-1.5 w-fitll text-sm font-medium h-fit bg-lime-200 hover:bg-lime-300 duration-300 rounded-full"
               >
                 {features}
               </div>

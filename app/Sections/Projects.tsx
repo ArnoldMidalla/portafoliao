@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { projectsMap } from "../components/data/projects";
+import { App, projectsMap } from "../components/data/projects";
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -63,22 +63,67 @@ export default function Projects() {
                 // When the screen size is small (mobile), the image takes up the full width of the viewport (100vw).
                 // When the screen size is medium (laptop/tablet), the image takes up half of the viewport width (50vw).
                 // For large screens (desktop), it will take up 33% of the viewport width (33vw).
-                className={`${
-                  projects.type === "app" ? "object-contain" : "object-cover"
-                } transition-opacity duration-300 opacity-100 group-hover:opacity-0`}
+                className={`object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0`}
               />
               <Image
                 src={projects.image2}
                 alt={projects.title}
                 fill
                 sizes="(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 50vw"
-                className={`${
-                  projects.type === "app" ? "object-contain" : "object-cover"
-                } transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
+                className={`object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
               />
             </div>
             <div className="flex justify-between items-center">
               <p className="text-lg font-medium">{projects.title}</p>
+              <IconArrowRight />
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      {/* apps */}
+      <div className="grid md:grid-cols-3 w-full h-full max-w-xs md:min-w-5xl md:max-w-5xl gap-22">
+        {App.map((appProjects) => (
+          <Link
+            key={appProjects.id}
+            href={`/project/${appProjects.id}`}
+            className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group animate-text"
+            // target="_blank"
+          >
+            {appProjects.video ? (
+              <video
+                className="h-120 w-full"
+                controls={false}
+                preload="none"
+                autoPlay
+                muted
+                loop
+              >
+                <source src="/projects/binaVidC.mp4" type="video/mp4" />
+              </video>
+            ) : (
+              <div className="relative overflow-hidden h-120 w-full">
+                <Image
+                  src={appProjects.image}
+                  alt={appProjects.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 50vw"
+                  // When the screen size is small (mobile), the image takes up the full width of the viewport (100vw).
+                  // When the screen size is medium (laptop/tablet), the image takes up half of the viewport width (50vw).
+                  // For large screens (desktop), it will take up 33% of the viewport width (33vw).
+                  className={`object-contain transition-opacity duration-300 opacity-100 group-hover:opacity-0`}
+                />
+                <Image
+                  src={appProjects.image2}
+                  alt={appProjects.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 50vw"
+                  className={`object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
+                />
+              </div>
+            )}
+            <div className="flex justify-between items-center">
+              <p className="text-lg font-medium">{appProjects.title}</p>
               <IconArrowRight />
             </div>
           </Link>
