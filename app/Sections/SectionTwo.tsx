@@ -15,6 +15,9 @@ const myStack = [
   "Git",
   "GitHub",
   "React Native",
+  "Expo",
+  "Tailwind",
+  "Nativewind",
   "Figma",
   "Supabase",
   "Neon",
@@ -25,7 +28,6 @@ const myStack = [
   "NodeJs",
   "MongoDb",
   "PostgreSql",
-  "Tailwind",
 ];
 
 export default function SectionTwo() {

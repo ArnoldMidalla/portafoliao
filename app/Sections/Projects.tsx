@@ -99,7 +99,7 @@ export default function Projects() {
                 muted
                 loop
               >
-                <source src="/projects/binaVidC.mp4" type="video/mp4" />
+                <source src={appProjects.video} type="video/mp4" />
               </video>
             ) : (
               <div className="relative overflow-hidden h-120 w-full">

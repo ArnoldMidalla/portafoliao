@@ -174,8 +174,8 @@ export const App = [
     image: "/projects/medium1.png",
     image2: "/projects/medium2.png",
     liveLink: "#",
-    image3: "",
-    video: "",
+    image3: "/projects/medium1.png",
+    video: "/projects/mediumVidC.mp4",
     type: "app",
     about:
       "A recreation of the Medium app with features such as tab switching, liking, commenting, and following authors",
