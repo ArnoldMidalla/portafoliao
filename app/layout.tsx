@@ -5,6 +5,8 @@ import Nav from "./components/navbar";
 import Cursor from "./components/cursor";
 import { Toaster } from "sonner";
 
+import { Analytics } from "@vercel/analytics/next";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -48,6 +50,7 @@ export default function RootLayout({
         <Cursor />
         <Toaster richColors />
         {children}
+        <Analytics />
       </body>
     </html>
   );
