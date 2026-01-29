@@ -54,9 +54,7 @@ export default function Page() {
 
         {/* Images */}
         <section
-          className={`flex ${
-            project.type === "app" ? "flex-col" : "flex-row"
-          } md:flex-row gap-8 max-w-xs md:max-w-5xl`}
+          className={`flex flex-col md:flex-row gap-8 max-w-xs md:max-w-5xl`}
         >
           {project.video ? (
             <>
