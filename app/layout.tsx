@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-})
+});
 
 const grand = Grand_Hotel({
   variable: "--font-grand-hotel",
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
   title: "Arnold's Portfolio",
   description: "Hire this guy. He's really good",
   icons: {
-    icon: "/thumb-v2.jpg"
-  }
+    icon: "/thumb-v2.jpg",
+  },
 };
 
 export default function RootLayout({
@@ -44,9 +44,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${grand.variable} antialiased select-none`}
       >
-        <Nav/>
-        <Cursor/>
-        <Toaster richColors/>
+        <Nav />
+        <Cursor />
+        <Toaster richColors />
         {children}
       </body>
     </html>

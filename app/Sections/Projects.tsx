@@ -51,7 +51,7 @@ export default function Projects() {
           <Link
             key={projects.id}
             href={`/project/${projects.id}`}
-            className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group animate-text"
+            className="w-full h-full md:cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group animate-text"
             // target="_blank"
           >
             <div className="relative overflow-hidden h-60 w-full">
@@ -87,7 +87,7 @@ export default function Projects() {
           <Link
             key={appProjects.id}
             href={`/project/${appProjects.id}`}
-            className="w-full h-full cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group animate-text"
+            className="w-full h-full md:cursor-none flex flex-col justify-between gap-2 hover:scale-103 hover:-rotate-1 duration-300 border-b-2 border-transparent hover:border-lime-200 pb-2 group animate-text"
             // target="_blank"
           >
             {appProjects.video ? (
