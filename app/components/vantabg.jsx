@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import MainContent from "../Sections/mainContent";
 // import Cursor from "./cursor";
 
 export default function VantaDotsBackground() {

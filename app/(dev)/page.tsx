@@ -1,12 +1,12 @@
-import VantaDotsBackground from "./components/vantabg";
-import SectionThree from "./Sections/SectionThree";
-import MainContent from "./Sections/mainContent";
-import SectionTwo from "./Sections/SectionTwo";
-import Projects from "./Sections/Projects";
-import Contact from "./Sections/Contact";
-import Footer from "./Sections/Footer";
-import Title from "./components/title";
-import About from "./Sections/About";
+import VantaDotsBackground from "../components/vantabg";
+import SectionThree from "../Sections/SectionThree";
+import MainContent from "../Sections/mainContent";
+import SectionTwo from "../Sections/SectionTwo";
+import Projects from "../Sections/Projects";
+import Contact from "../Sections/Contact";
+import Footer from "../Sections/Footer";
+import Title from "../components/title";
+import About from "../Sections/About";
 
 export default function Home() {
   return (

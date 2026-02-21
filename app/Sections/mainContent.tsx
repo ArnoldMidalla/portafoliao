@@ -47,11 +47,11 @@ export default function MainContent() {
           icon={IconBrandTwitter}
           // size={28}
         />
-        <MagnetButton
+        {/* <MagnetButton
           link="https://www.instagram.com/ArnoldIsADev/"
           icon={IconBrandInstagram}
           alt=""
-        />
+        /> */}
         <MagnetButton
           link="https://www.tiktok.com/@arnoldmidalla.dev/"
           icon={IconBrandTiktok}

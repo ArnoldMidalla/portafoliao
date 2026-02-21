@@ -46,7 +46,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dmSans.variable} ${grand.variable} antialiased select-none`}
       >
-        <Nav />
+        {/* <Nav /> */}
         <Cursor />
         <Toaster richColors />
         {children}

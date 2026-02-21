@@ -82,13 +82,13 @@ export default function SectionTwo() {
       ref={sectionRef}
       className="min-w-dvw min-h-dvh bg-neutral-900 text-white font-dm flex flex-col items-center justify-center gap-8 text-3xl text-center px-6 py-24 tracking-tight"
     >
-      <div className="container max-w-xs text-xl md:max-w-3xl md:text-3xl animate-text font-medium md:font-normal">
+      <div className="container px-4 md:px-0 text-xl md:max-w-3xl md:text-3xl animate-text font-medium md:font-normal">
         <h2>
           I'm Arnold - a Web & App Developer turning ideas into good,
           interactive, and visually appealing digital experiences.
         </h2>
       </div>
-      <div className="container max-w-xs md:max-w-3xl text-lg md:text-xl animate-text font-light">
+      <div className="container px-4 md:px-0 md:max-w-3xl text-lg md:text-xl animate-text font-light">
         <h2>
           I build dynamic websites, mobile apps, and responsive dashboards that
           are not only functional but also a joy to interact with. My toolkit
@@ -96,7 +96,7 @@ export default function SectionTwo() {
           PostgreSql amongst other things
         </h2>
       </div>
-      <div className="container max-w-xs md:max-w-3xl text-xl md:text-2xl animate-text font-light flex justify-center flex-wrap space-x-3 space-y-2">
+      <div className="container px-4 md:px-0 md:max-w-3xl text-xl md:text-2xl animate-text font-light flex justify-center flex-wrap space-x-3 space-y-2">
         {myStack.map((test) => (
           <div
             key={test}
@@ -106,7 +106,7 @@ export default function SectionTwo() {
           </div>
         ))}
       </div>
-      <div className="container2 max-w-xs md:max-w-3xl text-xl md:text-3xl animate-text2">
+      <div className="container2 px-4 md:px-0 md:max-w-3xl text-xl md:text-3xl animate-text2">
         <ConcusButton text="Contact" link="/#contact" nada={true} />
       </div>
     </div>

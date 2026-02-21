@@ -29,7 +29,7 @@ export default function Projects() {
         scrollTrigger: {
           trigger: container,
           start: "top 80%",
-          end: "top 40%",
+          end: "top 60%",
           scrub: 1,
         },
       });
@@ -42,11 +42,11 @@ export default function Projects() {
 
   return (
     <section
-      className="min-h-dvh min-w-dvw bg-neutral-900 flex flex-col items-center pt-24 py-8 font-dm text-white"
+      className="min-h-dvh min-w-dvw bg-neutral-900 flex flex-col gap-8 items-center pt-24 py-8 font-dm text-white"
       id="project"
       ref={sectionRef}
     >
-      <div className="grid md:grid-cols-2 w-full h-full max-w-xs  md:min-w-5xl md:max-w-5xl gap-22">
+      <div className="grid md:grid-cols-3 w-full h-full max-w-xs md:min-w-5xl md:max-w-5xl gap-10">
         {projectsMap.map((projects) => (
           <Link
             key={projects.id}
@@ -72,10 +72,16 @@ export default function Projects() {
                 sizes="(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 50vw"
                 className={`object-cover transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
               />
+              <p className="absolute top-4 right-4 rounded-full py-1.5 px-3 backdrop-blur bg-white/50 border border-neutral-600 text-black text-xs">
+                {projects.type || "Website"}
+              </p>
             </div>
-            <div className="flex justify-between items-center">
-              <p className="text-lg font-medium">{projects.title}</p>
-              <IconArrowRight />
+            <div className="flex flex-col">
+              <div className="flex justify-between items-center">
+                <p className="text-lg font-medium">{projects.title}</p>
+                <IconArrowRight />
+              </div>
+              <p className="text-sm opacity-80">{projects.about}</p>
             </div>
           </Link>
         ))}
@@ -91,16 +97,21 @@ export default function Projects() {
             // target="_blank"
           >
             {appProjects.video ? (
-              <video
-                className="h-120 w-full"
-                controls={false}
-                preload="none"
-                autoPlay
-                muted
-                loop
-              >
-                <source src={appProjects.video} type="video/mp4" />
-              </video>
+              <>
+                <video
+                  className="h-120 w-full"
+                  controls={false}
+                  preload="none"
+                  autoPlay
+                  muted
+                  loop
+                >
+                  <source src={appProjects.video} type="video/mp4" />
+                </video>
+                <p className="absolute top-4 right-4 rounded-full py-1.5 px-3 backdrop-blur bg-white/50 border border-neutral-600 text-black text-xs">
+                  {appProjects.type || "Website"}
+                </p>
+              </>
             ) : (
               <div className="relative overflow-hidden h-120 w-full">
                 <Image
@@ -120,6 +131,9 @@ export default function Projects() {
                   sizes="(max-width: 768px) 100vw, (min-width: 769px) and (max-width: 1200px) 50vw, 50vw"
                   className={`object-contain transition-opacity duration-300 opacity-0 group-hover:opacity-100`}
                 />
+                <p className="absolute top-4 right-4 rounded-full py-1.5 px-3 backdrop-blur bg-white/50 border border-neutral-600 text-black text-xs">
+                  {appProjects.type || "Website"}
+                </p>
               </div>
             )}
             <div className="flex justify-between items-center">
