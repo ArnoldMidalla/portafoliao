@@ -8,7 +8,7 @@ export const projectsMap = [
     title: "Getpointa",
     image: "/projects/getpointa_1.png",
     image2: "/projects/getpointa_2.png",
-    liveLink: "https://www.getpointa.app/explore",
+    liveLink: "https://www.getpointa.vercel.app/",
     about:
       "Book appointments and get recommendations for local services around you",
     stack: [
