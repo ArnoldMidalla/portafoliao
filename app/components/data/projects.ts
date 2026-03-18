@@ -10,13 +10,18 @@ export const projectsMap = [
     image2: "/projects/getpointa_2.png",
     liveLink: "https://www.getpointa.vercel.app/",
     about:
-      "Book appointments and get recommendations for local services around you",
+      "GetPointA is an all-in-one service commerce platform designed to bridge the gap between local service providers (barbers, nail technicians, stylists) and their clients. Unlike generic booking tools, it serves as a specialized digital storefront that handles the complexities of scheduling, automated client communication, and secure payments.",
     stack: [
       "Nextjs",
       "React",
       "Tailwind",
       "PostgreSql",
       "Neon",
+      "Drizzle",
+      "Shadcn",
+      "Better Auth",
+      "Zustland",
+      "Typescript",
     ],
     feat: [
       "Responsive Design",
