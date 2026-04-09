@@ -81,7 +81,7 @@ export default function Projects() {
                 <p className="text-lg font-medium">{projects.title}</p>
                 <IconArrowRight />
               </div>
-              <p className="text-sm opacity-80">{projects.about}</p>
+              <p className="text-sm opacity-80 line-clamp-3">{projects.about}</p>
             </div>
           </Link>
         ))}
